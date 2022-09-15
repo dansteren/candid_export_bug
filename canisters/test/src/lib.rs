@@ -5,6 +5,14 @@ struct User {
     id: String,
 }
 
+#[ic_cdk_macros::query]
+#[candid::candid_method(query)]
+async fn fix() -> User {
+    User {
+        id: "a".to_string(),
+    }
+}
+
 #[ic_cdk_macros::query(manual_reply = true)]
 #[candid::candid_method(query)]
 async fn method() -> ManualReply<User> {

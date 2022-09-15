@@ -1,2 +1,2 @@
-type ManualReply = record { id : text };
-service : { method : () -> (ManualReply) query }
+type User = record { id : text };
+service : { fix : () -> (User) query; method : () -> (User) query }
