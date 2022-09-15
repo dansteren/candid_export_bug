@@ -1,0 +1,2 @@
+type ManualReply = record { id : text };
+service : { method : () -> (ManualReply) query }
